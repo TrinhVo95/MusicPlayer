@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUSIC PLAYER</title>
+    <link rel="shortcut icon" href="./image/icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- information -->
+    <div class="music-container" id="music-container">
+      <div class="music-info">
+        <h3 id="title"></h3>
+        <h4 id="singer"></h4>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+      <!-- Music and image -->
+      <audio src="./music/SOLO.mp3" id="audio"></audio>
+      <div class="img-container">
+        <img src="./image/SOLO.jpeg" id="cover" alt="" />
+      </div>
+      <!-- button -->
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fa-solid fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fa-solid fa-forward"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Playlist -->
+    <div class="playlist" id="playlist"></div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
