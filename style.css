@@ -20,7 +20,7 @@ body {
 .music-container {
   background-color: #fff;
   border-radius: 15px;
-  box-shadow: 0 -15px 20px 0 rgba(255, 192, 203, 0.75);
+  /* box-shadow: 0 -15px 20px 0 rgba(255, 192, 203, 0.75); */
   display: flex;
   padding: 20px 30px;
   position: relative;

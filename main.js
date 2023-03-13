@@ -65,7 +65,7 @@ function render() {
     return `
       <div class="song ${
         index === songIndex ? "active" : ""
-      }" data-index="${index}">
+      }" data-index=${index}>
         <div
           class="thumb"
           style=" background-image: url('${song.image}');"
@@ -118,7 +118,6 @@ function nextSong() {
   }
 
   loadSong(songs[songIndex]);
-
   playSong();
   render();
 }
@@ -131,7 +130,6 @@ function prevSong() {
   }
 
   loadSong(songs[songIndex]);
-
   playSong();
   render();
 }
@@ -174,10 +172,10 @@ document.body.addEventListener("keydown", function (event) {
 //Click song
 playlist.addEventListener("click", function (e) {
   const songNode = e.target.closest(".song:not(.active)");
-  if (songNode || e.target.closest(".option")) {
-    songIndex = songNode.dataset.index;
-    loadSong(songs[songIndex]);
+  if (songNode) {
+    songIndex = Number(songNode.getAttribute("data-index"));
 
+    loadSong(songs[songIndex]);
     playSong();
     render();
   }
